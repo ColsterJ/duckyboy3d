@@ -1,0 +1,1 @@
+This folder and all example scenes can be safely deleted.

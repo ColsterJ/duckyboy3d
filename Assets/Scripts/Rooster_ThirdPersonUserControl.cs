@@ -1,0 +1,184 @@
+// MODIFIED by Colin Jones - 
+
+using System;
+using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
+using UnityStandardAssets.Characters.ThirdPerson;
+
+[RequireComponent(typeof(ThirdPersonCharacter))]
+public class Rooster_ThirdPersonUserControl : MonoBehaviour
+{
+    private ThirdPersonCharacter m_Character; // A reference to the ThirdPersonCharacter on the object
+    private Transform m_Cam;                  // A reference to the main camera in the scenes transform
+    private Vector3 m_CamForward;             // The current forward direction of the camera
+    private Vector3 m_Move;
+    private bool m_Jump;                      // the world-relative desired move direction, calculated from the camForward and user input.
+
+    // Input for movement
+    private float _horizontal, _vertical;
+    public float InputSensitivity = 0.5f;
+    public string jumpInput = "ActionA";
+
+    [Tooltip("Allow the W, A, S, D keys to control the movement of the character.\nNOTE: If your custom axis includes WASD, this won't prevent those keys from triggering movement when that mode is enabled.")]
+    public bool allowWASDForMovement = true;
+    [Tooltip("Allow the arrow keys to control the movement of the character.\nNOTE: If your custom axis includes arrow keys, this won't prevent those keys from triggering movement when that mode is enabled.")]
+    public bool allowArrowKeysForMovement = true;
+
+    [Space]
+    public string customDigitalVerticalAxis = "Digital_Vertical", customDigitalHorizontalAxis = "Digital_Horizontal";
+    [Tooltip("Allow the specified horizontal and vertical axes to act as digital movement inputs (i.e. for a DPad).")]
+    public bool allowCustomDigitalAxialMovement = false;
+
+    [Space]
+    public string alternateCustomDigitalVerticalAxis = "Vertical", alternateCustomDigitalHorizontalAxis = "Horizontal";
+    [Tooltip("Allow the specified ALTERNATE horizontal and vertical axes to act as digital movement inputs (i.e. for an analog stick mimicking a digital control).")]
+    public bool allowAlternateCustomDigitalAxialMovement = false;
+
+    // Between left or right, which was the last input used first? (left=true, right=false)
+    private bool _leftLastInput;
+    // Between up or down, which was the last input used first? (up=true, down=false)
+    private bool _upLastInput;
+    private bool player_made_move = false;
+
+    private void Start()
+    {
+        // get the transform of the main camera
+        if (Camera.main != null)
+        {
+            m_Cam = Camera.main.transform;
+        }
+        else
+        {
+            Debug.LogWarning(
+                "Warning: no main camera found. Third person character needs a Camera tagged \"MainCamera\", for camera-relative controls.");
+            // we use self-relative controls in this case, which probably isn't what the user wants, but hey, we warned them!
+        }
+
+        // get the third person character ( this should never be null due to require component )
+        m_Character = GetComponent<ThirdPersonCharacter>();
+    }
+
+
+    private void Update()
+    {
+        ProcessInput();
+
+        if (!m_Jump)
+        {
+            m_Jump = CrossPlatformInputManager.GetButtonDown(jumpInput);
+        }
+    }
+
+
+    // Fixed update is called in sync with physics
+    private void FixedUpdate()
+    {
+        bool crouch = Input.GetKey(KeyCode.C);
+
+        // calculate move direction to pass to character
+        if (m_Cam != null)
+        {
+            // calculate camera relative direction to move:
+            m_CamForward = Vector3.Scale(m_Cam.forward, new Vector3(1, 0, 1)).normalized;
+            m_Move = _vertical * m_CamForward + _horizontal * m_Cam.right;
+        }
+        else
+        {
+            // we use world-relative directions in the case of no main camera
+            m_Move = _vertical * Vector3.forward + _horizontal * Vector3.right;
+        }
+#if !MOBILE_INPUT
+        // walk speed multiplier
+        if (Input.GetKey(KeyCode.LeftShift)) m_Move *= 0.5f;
+#endif
+
+        // pass all parameters to the character control script
+        if (player_made_move)     // This ensures movement vector isn't passed to character controller unless the player intends to be moving
+                                  // (otherwise, when at a stand-still but moving the camera, player character will still turn to reorient himself relative
+                                  // to the camera forward position, which is how it works in for example Jedi Outcast, Indiana Jones Emperor's Tomb IIRC
+                                  // but is not used in newer games like Sleeping Dogs or even Zelda Wind Waker iirc
+            m_Character.Move(m_Move, crouch, m_Jump);
+        else
+            m_Character.Move(Vector3.zero, crouch, m_Jump);
+        m_Jump = false;
+    }
+
+    void ProcessInput()
+    {
+        bool leftDown, rightDown, upDown, downDown;
+        bool _leftDown_wasd = false, _rightDown_wasd = false, _upDown_wasd = false, _downDown_wasd = false;
+        bool _leftDown_arrows = false, _rightDown_arrows = false, _upDown_arrows = false, _downDown_arrows = false;
+        bool _leftDown_axial = false, _rightDown_axial = false, _upDown_axial = false, _downDown_axial = false;
+        bool _leftDown_axial2 = false, _rightDown_axial2 = false, _upDown_axial2 = false, _downDown_axial2 = false;
+
+        // read inputs
+        if (allowWASDForMovement)
+        {
+            _leftDown_wasd = Input.GetKey(KeyCode.A);
+            _rightDown_wasd = Input.GetKey(KeyCode.D);
+            _upDown_wasd = Input.GetKey(KeyCode.W);
+            _downDown_wasd = Input.GetKey(KeyCode.S);
+        }
+        if (allowArrowKeysForMovement)
+        {
+            _leftDown_arrows = Input.GetKey(KeyCode.LeftArrow);
+            _rightDown_arrows = Input.GetKey(KeyCode.RightArrow);
+            _upDown_arrows = Input.GetKey(KeyCode.UpArrow);
+            _downDown_arrows = Input.GetKey(KeyCode.DownArrow);
+        }
+        if (allowCustomDigitalAxialMovement)
+        {
+            _leftDown_axial = (Input.GetAxis(customDigitalHorizontalAxis) < 0);
+            _rightDown_axial = (Input.GetAxis(customDigitalHorizontalAxis) > 0);
+            _upDown_axial = (Input.GetAxis(customDigitalVerticalAxis) > 0);
+            _downDown_axial = (Input.GetAxis(customDigitalVerticalAxis) < 0);
+        }
+        if (allowAlternateCustomDigitalAxialMovement)
+        {
+            _leftDown_axial2 = (Input.GetAxis(alternateCustomDigitalHorizontalAxis) < 0);
+            _rightDown_axial2 = (Input.GetAxis(alternateCustomDigitalHorizontalAxis) > 0);
+            _upDown_axial2 = (Input.GetAxis(alternateCustomDigitalVerticalAxis) > 0);
+            _downDown_axial2 = (Input.GetAxis(alternateCustomDigitalVerticalAxis) < 0);
+        }
+
+        leftDown = _leftDown_wasd || _leftDown_arrows || _leftDown_axial || _leftDown_axial2;
+        rightDown = _rightDown_wasd || _rightDown_arrows || _rightDown_axial || _rightDown_axial2;
+        upDown = _upDown_wasd || _upDown_arrows || _upDown_axial || _upDown_axial2;
+        downDown = _downDown_wasd || _downDown_arrows || _downDown_axial || _downDown_axial2;
+
+        bool bothHorizontalDown = leftDown && rightDown;
+        bool bothVerticalDown = upDown && downDown;
+
+        if (leftDown && !rightDown)
+        {
+            _leftLastInput = true;
+        }
+        else if (!leftDown && rightDown)
+        {
+            _leftLastInput = false;
+        }
+        if (upDown && !downDown)
+        {
+            _upLastInput = true;
+        }
+        else if (!upDown && downDown)
+        {
+            _upLastInput = false;
+        }
+
+        leftDown = bothHorizontalDown ? _leftLastInput : leftDown;
+        rightDown = bothHorizontalDown ? !_leftLastInput : rightDown;
+        upDown = bothVerticalDown ? _upLastInput : upDown;
+        downDown = bothVerticalDown ? !_upLastInput : downDown;
+
+        float horizontalTarget = leftDown ? -1 : 0;
+        horizontalTarget = rightDown ? 1 : horizontalTarget;
+        float verticalTarget = upDown ? 1 : 0;
+        verticalTarget = downDown ? -1 : verticalTarget;
+
+        _horizontal = Mathf.Lerp(_horizontal, horizontalTarget, InputSensitivity);
+        _vertical = Mathf.Lerp(_vertical, verticalTarget, InputSensitivity);
+
+        player_made_move = (leftDown || rightDown || upDown || downDown) ? true : false;
+    }
+}

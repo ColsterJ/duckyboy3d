@@ -1,0 +1,14 @@
+There have been some changes to the way some of the cameras work in order to help smoothe them out.
+If you don't care about these changes and want to use the older version, then you will need to use the "OldV1" version of your camera script.
+You will be able to find "BasicCameraControllerOldV1", "FollowCameraControllerOldV1", and "HoldPositionCameraControllerOldV1".
+
+If you want to use the new changes, then for both the Basic and Follow camera controllers, put the camera as a child of the TARGET game object you are using.
+The update now uses the FixedUpdate instead of the regular Update, so it should work better with physics based movement.
+
+NOTE: As you can see in the Basic2 example scene. If you put the camera as a child of the target object, and the target object rotates, the camera will too.
+If you are basing the rotation of the target object in world space on the camera's virtual transform, this can cause jumpiness as the camera rotates twice and then pops back.
+You can fix this by unattaching the camera from it's parent and then reattaching it after declaring the rotation.
+
+As always, if you have questions, feel free to contact me at advancedtoolsunity@gmail.com and I can see what I can do to help.
+If you like this asset, I'd love if you could give a rating at https://www.assetstore.unity3d.com/en/#!/account/downloads/search=#PACKAGES
+Thank you for using my asset, I've gotten tons of feedback!
