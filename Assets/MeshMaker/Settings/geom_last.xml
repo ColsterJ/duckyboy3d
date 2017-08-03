@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <settings>
+    <incrementPositionX>0</incrementPositionX>
+    <incrementPositionY>1</incrementPositionY>
+    <incrementPositionZ>0</incrementPositionZ>
+    <incrementRotationX>0</incrementRotationX>
+    <incrementRotationY>0</incrementRotationY>
+    <incrementRotationZ>0</incrementRotationZ>
+    <incrementScaleX>1</incrementScaleX>
+    <incrementScaleY>1</incrementScaleY>
+    <incrementScaleZ>1</incrementScaleZ>
+    <textureFileName>geom</textureFileName>
+    <show2DFlag>true</show2DFlag>
+    <spline2DColorRed>1</spline2DColorRed>
+    <spline2DColorGreen>0.921568632</spline2DColorGreen>
+    <spline2DColorBlue>0.0156862754</spline2DColorBlue>
+    <spline3DColorRed>1</spline3DColorRed>
+    <spline3DColorGreen>0.921568632</spline3DColorGreen>
+    <spline3DColorBlue>0.0156862754</spline3DColorBlue>
+    <meshColorRed>0</meshColorRed>
+    <meshColorGreen>1</meshColorGreen>
+    <meshColorBlue>1</meshColorBlue>
+    <gridColorRed>1</gridColorRed>
+    <gridColorGreen>0</gridColorGreen>
+    <gridColorBlue>0</gridColorBlue>
+    <createPrefab>true</createPrefab>
+    <capFirstGridFlag>true</capFirstGridFlag>
+    <capLastGridFlag>true</capLastGridFlag>
+    <twoSidedMeshFlag>false</twoSidedMeshFlag>
+    <invertMeshFlag>false</invertMeshFlag>
+    <smoothNormalsFlag>true</smoothNormalsFlag>
+    <maxSmoothAngle>45</maxSmoothAngle>
+    <uvMappingType>0</uvMappingType>
+    <meshName>New Mesh</meshName>
+    <pivotPointX>0</pivotPointX>
+    <pivotPointY>0</pivotPointY>
+    <pivotPointZ>0</pivotPointZ>
+  </settings>
+</Settings>

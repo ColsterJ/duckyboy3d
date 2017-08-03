@@ -1,0 +1,1 @@
+This folder holds the Undo and Redo data files for Geom, 3D Brush and Sculptor. This text file is a placeholder for the empty folder.

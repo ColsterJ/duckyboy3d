@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <settings>
+    <lastVersion>-1</lastVersion>
+    <upToDate>true</upToDate>
+    <showSettingsWindow>true</showSettingsWindow>
+    <enableFlashing>false</enableFlashing>
+    <numFlashes>15</numFlashes>
+    <flashColorRed>1</flashColorRed>
+    <flashColorGreen>1</flashColorGreen>
+    <flashColorBlue>0</flashColorBlue>
+    <flashColorAlpha>0.5</flashColorAlpha>	
+  </settings>
+</Settings>

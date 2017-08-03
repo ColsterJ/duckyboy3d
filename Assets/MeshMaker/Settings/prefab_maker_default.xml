@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <settings>
+    <showTooltips>true</showTooltips>
+    <snapToGrid>true</snapToGrid>
+    <meshesPath>Assets/MeshMaker/Meshes/</meshesPath>
+    <prefabsPath>Assets/MeshMaker/Prefabs/</prefabsPath>
+    <textureFormat>-3</textureFormat>
+    <compressionQuality>100</compressionQuality>
+    <maxTextureSize>4096</maxTextureSize>
+    <alphaIsTransparency>true</alphaIsTransparency>
+    <grayscaleToAlpha>false</grayscaleToAlpha>
+    <npotScale>0</npotScale>
+    <readable>false</readable>
+    <wrapMode>1</wrapMode>
+    <linearTexture>false</linearTexture>
+    <filterMode>2</filterMode>
+    <aniso>1</aniso>
+    <mipmapEnabled>true</mipmapEnabled>
+    <generateMipsInLinearSpace>false</generateMipsInLinearSpace>
+    <fadeOut>false</fadeOut>
+    <mipmapBias>0</mipmapBias>
+    <mipmapFadeDistanceStart>0</mipmapFadeDistanceStart>
+    <mipmapFadeDistanceEnd>0</mipmapFadeDistanceEnd>
+    <mipmapFilter>0</mipmapFilter>
+    <borderMipmap>false</borderMipmap>
+    <removeTriangles>false</removeTriangles>
+    <colliderType>3</colliderType>
+    <powerOfTwo>false</powerOfTwo>
+    <borderWidth>16</borderWidth>
+    <gridSize>16</gridSize>
+    <resizePercentage>25</resizePercentage>
+    <combineOptionsFoldout>false</combineOptionsFoldout>
+    <pivotPointFoldout>false</pivotPointFoldout>
+    <settingsFoldout>false</settingsFoldout>
+  </settings>
+</Settings>

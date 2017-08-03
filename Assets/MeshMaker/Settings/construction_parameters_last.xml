@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Parameters>
+  <parameters>
+    <cellWidth>80</cellWidth>
+    <cellHeight>200</cellHeight>
+    <edgeWidth>6</edgeWidth>
+    <tileWidth>80</tileWidth>
+    <tileHeight>2</tileHeight>
+    <roofWidth>80</roofWidth>
+    <roofHeight>80</roofHeight>
+    <roofEdgeThickness>8</roofEdgeThickness>
+    <eaveWidth>20</eaveWidth>
+    <floorHeight>1</floorHeight>
+    <foundationHeight>32</foundationHeight>
+    <doorsillHeight>2</doorsillHeight>
+    <roofPitch>45</roofPitch>
+    <unit>0.01905</unit>
+    <uvWidth>1</uvWidth>
+    <uvHeight>1</uvHeight>
+  </parameters>
+</Parameters>

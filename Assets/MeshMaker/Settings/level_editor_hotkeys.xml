@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EditorHotkey>
+  <hotkey>
+    <id>0</id>
+    <name>Switch On/Off</name>
+    <tooltip>Toggle Level Editor On/Off</tooltip>
+    <keycode>113</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>true</shift>
+  </hotkey>
+  <hotkey>
+    <id>1</id>
+    <name>Editing Mode</name>
+    <tooltip>Switch Editing Modes</tooltip>
+    <keycode>104</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>false</shift>
+  </hotkey>
+  <hotkey>
+    <id>2</id>
+    <name>Transform Mode</name>
+    <tooltip>Switch Transform Modes</tooltip>
+    <keycode>103</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>false</shift>
+  </hotkey>
+  <hotkey>
+    <id>3</id>
+    <name>Drawing Mode</name>
+    <tooltip>Switch Drawing Modes</tooltip>
+    <keycode>32</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>false</shift>
+  </hotkey>
+  <hotkey>
+    <id>4</id>
+    <name>Switch Axis/Angle</name>
+    <tooltip>Switch Between Axis/Angle/None</tooltip>
+    <keycode>97</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>true</shift>
+  </hotkey>
+  <hotkey>
+    <id>5</id>
+    <name>Switch Planes</name>
+    <tooltip>Switch Between XZ, XY and YZ Rendering Planes</tooltip>
+    <keycode>112</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>false</shift>
+  </hotkey>
+  <hotkey>
+    <id>6</id>
+    <name>Toggle Mirror</name>
+    <tooltip>Toggle Mirror On/Off</tooltip>
+    <keycode>109</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>false</shift>
+  </hotkey>
+  <hotkey>
+    <id>7</id>
+    <name>Reverse Faces</name>
+    <tooltip>Reverse Selected Faces</tooltip>
+    <keycode>105</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>false</shift>
+  </hotkey>
+  <hotkey>
+    <id>8</id>
+    <name>Duplicate</name>
+    <tooltip>Duplicate Selected Lines/Faces</tooltip>
+    <keycode>100</keycode>
+    <cmd>false</cmd>
+    <ctrl>true</ctrl>
+    <alt>false</alt>
+    <shift>false</shift>
+  </hotkey>
+  <hotkey>
+    <id>9</id>
+    <name>Toggle Wireframe</name>
+    <tooltip>Toggle Wireframe On/Off</tooltip>
+    <keycode>119</keycode>
+    <cmd>false</cmd>
+    <ctrl>true</ctrl>
+    <alt>false</alt>
+    <shift>false</shift>
+  </hotkey>
+  <hotkey>
+    <id>10</id>
+    <name>Save Mesh</name>
+    <tooltip>Open Save Mesh Dialog</tooltip>
+    <keycode>109</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>true</shift>
+  </hotkey>
+  <hotkey>
+    <id>11</id>
+    <name>Save Prefab</name>
+    <tooltip>Open Save Prefab Dialog</tooltip>
+    <keycode>112</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>true</shift>
+  </hotkey>
+  <hotkey>
+    <id>12</id>
+    <name>Add New Part</name>
+    <tooltip>Add New Part To Level</tooltip>
+    <keycode>116</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>true</shift>
+  </hotkey>
+  <hotkey>
+    <id>13</id>
+    <name>Load Parts</name>
+    <tooltip>Load Parts From File</tooltip>
+    <keycode>108</keycode>
+    <cmd>false</cmd>
+    <ctrl>true</ctrl>
+    <alt>false</alt>
+    <shift>false</shift>
+  </hotkey>
+  <hotkey>
+    <id>14</id>
+    <name>Repeat Load</name>
+    <tooltip>Repeat Last Loaded Part</tooltip>
+    <keycode>114</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>true</shift>
+  </hotkey>
+  <hotkey>
+    <id>15</id>
+    <name>Save Parts</name>
+    <tooltip>Save All Selected Parts To File</tooltip>
+    <keycode>107</keycode>
+    <cmd>false</cmd>
+    <ctrl>true</ctrl>
+    <alt>false</alt>
+    <shift>false</shift>
+  </hotkey>
+  <hotkey>
+    <id>16</id>
+    <name>Set Dimensions</name>
+    <tooltip>Set Last Line To Dimensions</tooltip>
+    <keycode>101</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>true</shift>
+  </hotkey>
+  <hotkey>
+    <id>17</id>
+    <name>Snap To Grid</name>
+    <tooltip>Toggle Snap To Grid On/Off</tooltip>
+    <keycode>103</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>true</shift>
+  </hotkey>
+  <hotkey>
+    <id>18</id>
+    <name>Delete Lines</name>
+    <tooltip>Delete All Lines From Part</tooltip>
+    <keycode>120</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>true</shift>
+  </hotkey>
+  <hotkey>
+    <id>19</id>
+    <name>Delete Guides</name>
+    <tooltip>Delete All Guidelines From Part</tooltip>
+    <keycode>98</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>true</shift>
+  </hotkey>
+  <hotkey>
+    <id>20</id>
+    <name>Delete Selected</name>
+    <tooltip>Delete All Selected Features</tooltip>
+    <keycode>127</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>false</shift>
+  </hotkey>
+  <hotkey>
+    <id>21</id>
+    <name>Clear Selected</name>
+    <tooltip>Clear All Selected Features</tooltip>
+    <keycode>27</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>false</shift>
+  </hotkey>
+  <hotkey>
+    <id>22</id>
+    <name>Move Pivot Point</name>
+    <tooltip>Unlock/Lock Pivot Point</tooltip>
+    <keycode>9</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>false</shift>
+  </hotkey>
+  <hotkey>
+    <id>23</id>
+    <name>Copy Lines</name>
+    <tooltip>Copy Selected Lines</tooltip>
+    <keycode>99</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>true</shift>
+  </hotkey>
+  <hotkey>
+    <id>24</id>
+    <name>Paste Lines</name>
+    <tooltip>Paste Copied Lines</tooltip>
+    <keycode>118</keycode>
+    <cmd>false</cmd>
+    <ctrl>false</ctrl>
+    <alt>false</alt>
+    <shift>true</shift>
+  </hotkey>
+</EditorHotkey>

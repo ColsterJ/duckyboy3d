@@ -1,0 +1,244 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Cartoon1
+  m_Shader: {fileID: 4800000, guid: 60266dd225cdd804696fba6a0852c651, type: 3}
+  m_ShaderKeywords: []
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 4f8e853fa5b1ccb47a1f65a45715ea49, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _RampTex
+        second:
+          m_Texture: {fileID: 2800000, guid: ee1e9d6c03d35224f8bf083fc9ab3328, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _StylizedTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Sketch0Tex
+        second:
+          m_Texture: {fileID: 2800000, guid: a2e310ad5a6f21543a1a1c01606f9162, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Sketch1Tex
+        second:
+          m_Texture: {fileID: 2800000, guid: d368bd194e13afc4ebde206553f6e0c8, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Sketch2Tex
+        second:
+          m_Texture: {fileID: 2800000, guid: a179e220503963e4ab88626114fbca77, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Sketch3Tex
+        second:
+          m_Texture: {fileID: 2800000, guid: 7efd91c457d888b438139b111f220acb, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Sketch4Tex
+        second:
+          m_Texture: {fileID: 2800000, guid: 08db23147f9e7874d8f3de816219a437, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Sketch5Tex
+        second:
+          m_Texture: {fileID: 2800000, guid: 55dfeca114a42294bad26be1710ba237, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _FringeTex
+        second:
+          m_Texture: {fileID: 2800000, guid: e3c23557c421dc24384542a1688a02d7, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Illum
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Hatch0Tex
+        second:
+          m_Texture: {fileID: 2800000, guid: a2e310ad5a6f21543a1a1c01606f9162, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Hatch1Tex
+        second:
+          m_Texture: {fileID: 2800000, guid: d368bd194e13afc4ebde206553f6e0c8, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Hatch2Tex
+        second:
+          m_Texture: {fileID: 2800000, guid: a179e220503963e4ab88626114fbca77, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Hatch3Tex
+        second:
+          m_Texture: {fileID: 2800000, guid: 7efd91c457d888b438139b111f220acb, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Hatch4Tex
+        second:
+          m_Texture: {fileID: 2800000, guid: 08db23147f9e7874d8f3de816219a437, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Hatch5Tex
+        second:
+          m_Texture: {fileID: 2800000, guid: 55dfeca114a42294bad26be1710ba237, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _OutlineWidth
+        second: .200000003
+      data:
+        first:
+          name: _SpecularScale
+        second: .0108928569
+      data:
+        first:
+          name: _SpecularTranslationX
+        second: 0
+      data:
+        first:
+          name: _SpecularTranslationY
+        second: 0
+      data:
+        first:
+          name: _SpecularRotationX
+        second: 0
+      data:
+        first:
+          name: _SpecularRotationY
+        second: 0
+      data:
+        first:
+          name: _SpecularRotationZ
+        second: 0
+      data:
+        first:
+          name: _SpecularScaleX
+        second: 0
+      data:
+        first:
+          name: _SpecularScaleY
+        second: 0
+      data:
+        first:
+          name: _SpecularSplitX
+        second: .25
+      data:
+        first:
+          name: _SpecularSplitY
+        second: .214285716
+      data:
+        first:
+          name: _StylizedTexStart
+        second: .5
+      data:
+        first:
+          name: _StylizedTexEnd
+        second: .600000024
+      data:
+        first:
+          name: _Tile
+        second: 4.03571415
+      data:
+        first:
+          name: _SpecPower
+        second: 7.28214502
+      data:
+        first:
+          name: _FilmDepth
+        second: .25
+      data:
+        first:
+          name: _Inset
+        second: 1
+      data:
+        first:
+          name: _Length
+        second: 26.2857151
+      data:
+        first:
+          name: _Width
+        second: 21.7142849
+      data:
+        first:
+          name: _EmissionLM
+        second: 0
+      data:
+        first:
+          name: _Power
+        second: 4.875
+      data:
+        first:
+          name: _ExpandFactor
+        second: 1
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _OutlineColor
+        second: {r: 0, g: 1, b: 0, a: 0}
+      data:
+        first:
+          name: _SpecularColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _DiffuseColor
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _MainTint
+        second: {r: 1, g: 1, b: 1, a: 1}
