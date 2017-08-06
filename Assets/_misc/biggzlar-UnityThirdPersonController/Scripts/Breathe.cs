@@ -14,15 +14,14 @@ public class Breathe : MonoBehaviour {
 	private float theta;
 
 	public Vector3 moveDir;
-	private Vector3 heightOffset;
+	public Vector3 offset;
 	public Transform target;
 
 	void Awake() {
-		heightOffset = new Vector3 (0, 0);
 	}
 	
 	void FixedUpdate() {
-		endPos = target.position + heightOffset;
+		endPos = target.position + offset;
 		theta = Time.deltaTime / period;
 		distance = amplitude * Mathf.Sin(theta);
 		moveDir = endPos - transform.position;
