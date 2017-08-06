@@ -5,18 +5,24 @@ using UnityEngine;
 public class Teleporter : MonoBehaviour {
     public Transform player, playerCamTarget;
     private Vector3 playerCamTarget_offset;
+    private Breathe pctBreatheCS;
 
     void Start()
     {
-        playerCamTarget_offset = playerCamTarget.position - player.position;
+        pctBreatheCS = playerCamTarget.GetComponent<Breathe>();
     }
 
     public void TeleportPlayer(Transform where)
     {
-        
-        playerCamTarget.gameObject.SetActive(false);
-        player.position = where.position;
-        playerCamTarget.position = where.position + playerCamTarget_offset;
-        playerCamTarget.gameObject.SetActive(true);
+        //playerCamTarget_offset = playerCamTarget.position - pctBreatheCS.target.position;
+        playerCamTarget_offset = playerCamTarget.position - player.position;
+
+        Vector3 nearestGround;
+        NearestGround.GetNearestGround(where.position, out nearestGround);
+
+        //playerCamTarget.gameObject.SetActive(false);
+        player.position = nearestGround;
+        playerCamTarget.position = nearestGround + playerCamTarget_offset;
+        //playerCamTarget.gameObject.SetActive(true);
     }
 }

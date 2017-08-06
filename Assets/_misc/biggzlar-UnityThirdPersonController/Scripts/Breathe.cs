@@ -26,7 +26,6 @@ public class Breathe : MonoBehaviour {
 		distance = amplitude * Mathf.Sin(theta);
 		moveDir = endPos - transform.position;
 
-		transform.position += moveDir * distance;
-
+        transform.position += moveDir * distance;
 	}
 }
