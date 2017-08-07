@@ -10,13 +10,13 @@ public class PlayerMovement : MonoBehaviour
 	public Transform pivotTransform;
 
 	Vector3 movement;
-    Quaternion newRotation, hChangeRotation;
+    Quaternion newRotation, hChangeRotation, faceDirRotation;
 
 	Animator anim;
 	CharacterController controller;
 	public float ySpeed;
 
-	[HideInInspector] public bool orbit, walking;
+	[HideInInspector] public bool orbit, walking, faceDirection;
 
     void Awake () {
 
@@ -46,14 +46,20 @@ public class PlayerMovement : MonoBehaviour
 		controller.Move (movement * Time.deltaTime);	
 	}
 
+    public void FaceDirection(Vector3 direction)
+    {
+        faceDirection = true;
+        faceDirRotation = Quaternion.LookRotation(direction, Vector3.up);
+    }
+
     void CalcMovement (float h, float v) 
 	{
 		movement = new Vector3 ();
 
 		if (v != 0 || h != 0)
 			movement = v * pivotForward() + h * pivotRight();
-			
-		movement = movement.normalized * speed;
+
+        movement = movement.normalized * speed;
     }
 
 	float VerticalSpeed()
@@ -71,6 +77,11 @@ public class PlayerMovement : MonoBehaviour
 	{
         if (walking)
             newRotation = Quaternion.LookRotation(movement, Vector3.up);
+        if (faceDirection)
+        {
+            newRotation = faceDirRotation;
+            faceDirection = false;
+        }
 
 		transform.rotation = newRotation;
 	}
