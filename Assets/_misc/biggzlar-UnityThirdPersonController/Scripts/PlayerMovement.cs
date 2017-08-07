@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
 
 	[HideInInspector] public Transform target;
 	public Transform pivotTransform;
+    public Vector3 initialDirectionToFace = Vector3.right;
 
 	Vector3 movement;
     Quaternion newRotation, hChangeRotation, faceDirRotation;
@@ -22,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
 		anim = GetComponent<Animator> ();
 		controller = GetComponent<CharacterController> ();
+
+        FaceDirection(initialDirectionToFace);
     }
 
 	void Update() 
