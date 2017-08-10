@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraTrigger : MonoBehaviour {
+public class CameraTrigger : MonoBehaviour
+{
     public GameObject cameraToSwitchTo;
     private GameObject originalCameraObject;
     private Camera myCamera;
@@ -16,7 +17,7 @@ public class CameraTrigger : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
             originalCameraObject.SetActive(false);
             cameraToSwitchTo.SetActive(true);
