@@ -226,9 +226,9 @@ namespace Fungus
                 {
                     button.gameObject.SetActive(true);
                     button.interactable = interactable;
-                    if (interactable && autoSelectFirstButton && !cachedButtons.Select(x => x.gameObject).Contains(EventSystem.current.currentSelectedGameObject))
+                    if (i==0 && interactable && autoSelectFirstButton && !cachedButtons.Select(x => x.gameObject).Contains(EventSystem.current.currentSelectedGameObject)) // CUSTOM
                     {
-                        EventSystem.current.SetSelectedGameObject(button.gameObject);
+                        StartCoroutine(DelayedSelect(button.gameObject.GetComponent<Selectable>()));    // CUSTOM
                     }
                     Text textComponent = button.GetComponentInChildren<Text>();
                     if (textComponent != null)
@@ -262,6 +262,12 @@ namespace Fungus
             }
 
             return addedOption;
+        }
+        IEnumerator DelayedSelect(Selectable selectable) // CUSTOM
+        {
+            yield return new WaitForEndOfFrame();
+            EventSystem.current.SetSelectedGameObject(null);
+            selectable.Select();
         }
 
         /// <summary>

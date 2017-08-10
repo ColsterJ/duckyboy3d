@@ -43,6 +43,13 @@ public class PlayerMovement : MonoBehaviour
 		anim.SetBool("move", walking);
 	}
 
+    public void StopMoving()
+    {
+        movement = Vector3.zero;
+        anim.SetBool("move", false);
+        Input.ResetInputAxes();
+    }
+
 	void FixedUpdate()
 	{
 		movement.y = VerticalSpeed();

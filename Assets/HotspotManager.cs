@@ -4,16 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class HotspotManager : MonoBehaviour {
+    public GameObject playerObject;
     public int gamepad_check_interval = 2;
     public Image interactPrompt_Gamepad, interactPrompt_Keyboard;
     [HideInInspector]
     public Image interactPrompt;
     public Hotspot currentHotspot;
+    private PlayerMovement pmCS;
 
     void Start()
     {
         interactPrompt = interactPrompt_Keyboard;
         StartCoroutine(CheckGamepadStatus_SlowLoop());  // If gamepad is connected, the loop will quickly determine that
+
+        pmCS = playerObject.GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -40,6 +44,11 @@ public class HotspotManager : MonoBehaviour {
     public void HideInteractPrompt()
     {
         interactPrompt.enabled = false;
+    }
+    public void SetPlayerMovement(bool status)
+    {
+        pmCS.StopMoving();
+        pmCS.enabled = status;
     }
 
     IEnumerator CheckGamepadStatus_SlowLoop()

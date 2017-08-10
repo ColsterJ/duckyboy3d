@@ -26,6 +26,7 @@ public class Hotspot : MonoBehaviour {
     {
         interacting = true;
         mgr.HideInteractPrompt();
+        mgr.SetPlayerMovement(false);
         interact.Invoke();
 
         if (useCustomPopAmount)
@@ -39,5 +40,6 @@ public class Hotspot : MonoBehaviour {
     {
         interacting = false;
         if(fp) fp.DoFovPopOut();
+        mgr.SetPlayerMovement(true);
     }
 }

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
         Application.targetFrameRate = 60;
         QualitySettings.vSyncCount = 1;
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
 
         faderAnimator = fader.GetComponent<Animator>();
 	}
