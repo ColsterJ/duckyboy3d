@@ -39,4 +39,14 @@ public class HotspotTrigger : MonoBehaviour {
             mgr.HideInteractPrompt();
         }
     }
+    public void StopUsingHotspot()
+    {
+        Debug.Log("HEYBWAMP!");
+        if (last != null)
+            mgr.currentHotspot = last;
+        else
+            mgr.currentHotspot = null;
+        mgr.HideInteractPrompt();
+        GetComponent<BoxCollider>().enabled = false;
+    }
 }

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
     public GameObject fader;
+    public bool hasTuna = false;
     private Animator faderAnimator;
 
 	// Use this for initialization
@@ -19,8 +20,8 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Escape))
-            StartCoroutine(DoSmoothQuit());
+        //if (Input.GetKeyDown(KeyCode.Escape))
+        // StartCoroutine(DoSmoothQuit());
         if (Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
