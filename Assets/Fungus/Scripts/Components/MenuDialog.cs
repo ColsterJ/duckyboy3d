@@ -15,6 +15,8 @@ namespace Fungus
     /// </summary>
     public class MenuDialog : MonoBehaviour
     {
+        public GameManager gameMgr; // CUSTOM
+
         [Tooltip("Automatically select the first interactable button when the menu is shown.")]
         [SerializeField] protected bool autoSelectFirstButton = false;
 
@@ -58,6 +60,9 @@ namespace Fungus
 
         protected virtual void OnEnable()
         {
+            if(gameMgr == null)// CUSTOM
+                gameMgr = GameObject.Find("Game Manager").GetComponent<GameManager>();
+
             // The canvas may fail to update if the menu dialog is enabled in the first game frame.
             // To fix this we just need to force a canvas update when the object is enabled.
             Canvas.ForceUpdateCanvases();
@@ -171,6 +176,8 @@ namespace Fungus
         /// </summary>
         public virtual void Clear()
         {
+            gameMgr.awaitingUIFeedback = false; // CUSTOM
+
             StopAllCoroutines();
 
             var optionButtons = GetComponentsInChildren<Button>();
@@ -218,6 +225,8 @@ namespace Fungus
         /// <param name="targetBlock">Block to execute when the option is selected.</param>
         public virtual bool AddOption(string text, bool interactable, Block targetBlock)
         {
+            gameMgr.awaitingUIFeedback = true; // CUSTOM
+
             bool addedOption = false;
             for (int i = 0; i < cachedButtons.Length; i++)
             {
@@ -277,6 +286,8 @@ namespace Fungus
         /// <returns><c>true</c>, if the option was added successfully.</returns>
         public virtual bool AddOption(string text, bool interactable, LuaEnvironment luaEnv, Closure callBack)
         {
+            gameMgr.awaitingUIFeedback = true;
+
             if (!gameObject.activeSelf)
             {
                 gameObject.SetActive(true);

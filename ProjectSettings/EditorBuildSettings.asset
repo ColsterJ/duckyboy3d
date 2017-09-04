@@ -5,6 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/cityblock_demo.unity
     guid: c2a8b32ae0107994ea227605a1d7d5ea
+  - enabled: 1
+    path: Assets/Scenes/cityblock.unity
+    guid: 687b1fe7d5971cd4b95e4c19b8e6b24b

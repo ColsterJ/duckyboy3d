@@ -41,7 +41,6 @@ public class HotspotTrigger : MonoBehaviour {
     }
     public void StopUsingHotspot()
     {
-        Debug.Log("HEYBWAMP!");
         if (last != null)
             mgr.currentHotspot = last;
         else

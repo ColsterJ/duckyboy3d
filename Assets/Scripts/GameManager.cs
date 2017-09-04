@@ -7,9 +7,10 @@ public class GameManager : MonoBehaviour {
     public GameObject fader;
     public bool hasTuna = false;
     private Animator faderAnimator;
+    public bool awaitingUIFeedback = false;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         Application.targetFrameRate = 60;
         QualitySettings.vSyncCount = 1;
         Cursor.visible = false;
