@@ -3,6 +3,7 @@
 Duckyboy 3D is a prototype version of a mystery adventure game starring an anthropomorphic duck. The player must explore his environment and talk to other characters in order to solve a simple puzzle.
 
 ## Features ##
+* Original character modeled in the 3d modeling software [Blender](https://www.blender.org/).
 * An overhead camera that cuts to different shots/angles depending on the scene, and zooms in when traveling to certain areas.
 * A 'hotspot' system for object interaction.
 * Automatic controller prompts when near an interactable object or character.
