@@ -2,6 +2,8 @@
 
 Duckyboy 3D is a prototype version of a mystery adventure game starring an anthropomorphic duck. The player must explore his environment and talk to other characters in order to solve a simple puzzle.
 
+You can play it [here](https://roosterisbest.itch.io/duckyboy-3d-prototype) in the browser on your desktop or laptop computer (tested on Google Chrome and Firefox)
+
 ## Screenshots ##
 ![Duckyboy encounters a nervous cat](db1.png)
 ![Sleep-deprived stranger at his wit's end](db2.png)
